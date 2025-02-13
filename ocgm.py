@@ -113,6 +113,8 @@ class OccupancyMap(Node):
             valid_indices = (0 <= grid_x) & (grid_x < self.grid_shape[1]) & (0 <= grid_y) & (grid_y < self.grid_shape[0])
             self.occupancy_map[grid_y[valid_indices], grid_x[valid_indices]] = 1
 
+                ###### แถวนี้แหละะะะะะ bug save map  
+
         # occupancy_map_for_path_planing
         self.expanded_map_for_path_planing = self.expand_obstacles(self.occupancy_map, expansion_cells=2)
         map_msg = Float64MultiArray()
